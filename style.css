@@ -159,38 +159,36 @@ nav ul {
   }
 }
 
+.container-fluid {
+  /* display: flex;
+  justify-content: center; */
+  overflow-x: auto;
+  white-space: nowrap; /* Prevents cards from wrapping to a new line */
+  margin: -16rem auto 16rem auto; /* Maintain the negative margin */
+}
+
+.container-fluid::-webkit-scrollbar {
+  display: none;
+}
+
+.review-container-fluid {
+  overflow-x: auto;
+  /* white-space: nowrap; */
+}
+
+.review-container-fluid::-webkit-scrollbar {
+  display: none;
+}
+
 .cards {
   max-width: 192rem;
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* margin-bottom: 16rem; */
-  /* gap: 3rem; */
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  gap: 8rem;
+  display: inline-flex; /* Use inline-flex to ensure cards stay in a row */
+  gap: 1rem;
   padding: 2rem;
-  margin: -16rem auto 16rem auto;
-  @media (max-width: 1310px) {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-  @media (max-width: 650px) {
-    grid-template-columns: 1fr 1fr;
-    margin: 0;
-  }
-  @media (max-width: 570px) {
-    grid-template-columns: 1fr;
-  }
 }
-.--4-- {
-  @media (max-width: 1310px) {
-    grid-column: 3/-1;
-    @media (max-width: 650px) {
-      display: none;
-    }
-  }
-}
+
 .card1 {
-  /* width: 30rem; */
+  min-width: 28rem;
   height: 31.5rem;
   background-color: #5398ff;
   padding: 4rem 2rem;
@@ -199,6 +197,7 @@ nav ul {
   border-left: 6px solid #5398ff;
   cursor: pointer;
 }
+
 .cutom-w {
   color: #fff;
   font-weight: 500;
@@ -212,6 +211,20 @@ nav ul {
   margin-bottom: 2rem;
   margin-top: 1rem;
 }
+
+.scroll-icons{
+  display: flex;
+  justify-content: flex-end;
+  margin: -14rem auto -7rem auto; /* Maintain the negative margin  1186px yad sata*/
+
+
+  @media (min-width: 1186px) {
+    display: none;
+  }
+}
+
+
+
 .card-btn {
   border: 1px solid #ffffff;
   font-size: 1.2rem;
@@ -236,6 +249,11 @@ nav ul {
   font-weight: 700;
   margin-bottom: 10rem;
   margin-top: 1rem;
+
+  @media (max-width: 991px) {
+    margin-bottom: 5rem;
+  }
+
 }
 .cutomize .change {
   color: #ff5851;
@@ -398,24 +416,21 @@ nav ul {
 .review-section {
   max-width: 192rem;
   background-color: #3d4461d6;
+  /* background-image: url(/assets/bg-reviews2.png);
+  background-position: center;
+  background-size: cover; */
 
   margin-bottom: 10rem;
   margin: 10rem auto;
   padding: 4rem 2rem;
 }
 .layout-review {
-  /* display: flex; */
-  display: grid;
-  /* flex-wrap: wrap; */
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: space-around;
+  display: flex;
   align-items: end;
-  margin-left: 1em;
-  margin-right: 1rem;
   gap: 2rem;
-  @media (max-width: 750px) {
+  /* @media (max-width: 750px) {
     grid-template-columns: 1fr 1fr;
-  }
+  } */
 }
 .rev-head {
   font-size: 4.2rem;
@@ -430,11 +445,10 @@ nav ul {
   padding: 2rem;
   background-color: #ffffff;
   height: 650px;
-
-  /* width: 35rem;  */
+  min-width: 280px; 
   border-radius: 11px;
   margin-top: 2rem;
-  @media (max-width: 1250px) {
+  /* @media (max-width: 1250px) {
     height: 550px;
   }
   @media (max-width: 950px) {
@@ -442,17 +456,17 @@ nav ul {
   }
   @media (max-width: 750px) {
     height: 550px;
-  }
+  } */
 }
 .card-sml {
   display: flex;
   flex-direction: column;
   height: 600px;
   border-radius: 11px;
-  /* width: 34rem; */
+  min-width: 280px;
   background-color: #ffffff;
   padding: 2rem;
-  @media (max-width: 1250px) {
+  /* @media (max-width: 1250px) {
     height: 500px;
   }
   @media (max-width: 950px) {
@@ -460,7 +474,7 @@ nav ul {
   }
   @media (max-width: 750px) {
     height: 500px;
-  }
+  } */
 }
 .error {
   align-self: center;
@@ -482,6 +496,22 @@ nav ul {
 .stars {
   margin-bottom: 2rem;
   width: 5rem;
+}
+
+.review-section-scroll-button{
+  position: relative;
+}
+
+.left-scroll-image{
+  position: absolute;
+  left: -4px;
+  top: 51%;
+}
+
+.right-scroll-image{
+  position: absolute;
+  right: 2px;
+  top: 52%;
 }
 
 /* ****************************** */
@@ -620,6 +650,8 @@ button {
 /****************************************************************** */
 .accordian-section {
   /* margin: 0 auto; */
+  display: flex;
+  justify-content: center;
   margin: 4% 10%;
   max-width: 129rem;
 }
