@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: poppins;
+  font-weight: 500;
+  line-height: 1;
+  /* color: #ffffff; */
+}
+#hero-section {
+  max-width: 192rem;
+  background-color: #3d4461bf;
+  height: 65rem;
+  z-index: -1;
+  margin: 0 auto;
+}
+.bg-logo {
+  position: absolute;
+  @media (max-width: 570px) {
+    display: none;
+  }
+}
+header {
+  display: flex;
+  align-items: center;
+  /* gap: 50rem; */
+  padding: 1rem 2.4rem;
+  justify-content: space-between;
+}
+.logo {
+  margin-left: 1rem;
+  position: sticky;
+  z-index: 1;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  /* justify-content: space-between; */
+  align-items: center;
+  @media (max-width: 970px) {
+    display: none;
+  }
+}
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-right: 3rem;
+}
+.outline {
+  margin-left: 3.6rem;
+  border: 1px solid #fff;
+  border-radius: 9px;
+  padding: 1rem 2rem;
+}
+.fill {
+  border: 1px solid #fff;
+  border-radius: 9px;
+  padding: 1rem 2rem;
+  background-color: #5398ff;
+}
+/* .icon {
+  display: none;
+  height: 34px;
+  width: 34px;
+  color: #5398ff;
+} */
+
+.headlines {
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 22px;
+  text-align: center;
+  margin-top: 18rem;
+  color: #ffffff;
+}
+
+/* ********************************************** */
+/* FORM STYLINGS */
+/* ********************************************** */
+.form {
+  max-width: 100rem;
+  background-color: #ffffff;
+  box-shadow: 0 20px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  /* height: 30rem; */
+  padding: 4rem 6rem;
+  margin-top: -20rem;
+}
+.form-demo label {
+  display: block;
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #000000a8;
+  margin-bottom: 0.5rem;
+}
+.form-demo input {
+  width: 100%;
+  font-size: 18px;
+  padding: 1.2rem;
+  border: 1px solid #00000080;
+  border-radius: 13px;
+  color: #00000075;
+  margin-bottom: 1rem;
+}
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+button {
+  /* padding: 100%; */
+  background-color: #5398ff;
+  color: #ffff;
+  padding: 0.5rem 45%;
+  border-radius: 13px;
+  font-size: 1.8rem;
+}
